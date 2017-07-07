@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Math_Game
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Display "title"
+            System.Console.WriteLine("Race to 10 Correct Answers!");
+            int n = 1;
+            while (n < 10)
+            {
+
+
+                //Generate random values for firstNum and secondNum
+                Random rnd = new Random();
+                int firstNum = rnd.Next(1, 20);
+                int secondNum = rnd.Next(1, 20);
+
+
+                //Show  Math Problem
+                
+                System.Console.WriteLine("Please Solve {0} + {1} =", firstNum, secondNum);
+                int guess = int.Parse(Console.ReadLine());
+
+                //Compare guess to answer
+                //Display if answer was correct or incorrect
+
+                int answer = firstNum + secondNum;
+                if (guess == answer)
+                {
+                    // Display number of correct answers and increment counter
+                    Console.WriteLine("{0} Correct!", n);
+                    n++;
+                }
+
+                else
+                {
+                    // Display incorrect and reset counter to 1
+                    Console.WriteLine("Incorrect!");
+                    n = 1;
+                }
+
+                
+
+
+
+
+            }
+            
+        }
+        
+       
+        }   
+
+}
